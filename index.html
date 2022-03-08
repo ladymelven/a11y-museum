@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Государственный музей изобразительных искусств имени А.С. Пушкина</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<a href="#main" class="hidden skip-link">Skip to main</a>
+
+<header class="header">
+    <div class="container header__container">
+        <a href="/" class="header__logo">
+            <img src="./img/logo.png" alt="Государственный музей изобразительных искусств имени А.С. Пушкина, на главную">
+        </a>
+        <form action="/" class="header__search search" role="search">
+            <label for="search-input" class="hidden search__label">Поиск по сайту</label>
+            <input type="text" class="search__input" id="search-input">
+            <button type="submit" class="search__submit">
+                <img src="./img/search.svg" alt="Искать">
+            </button>
+        </form>
+        <div class="header__languages">
+            <span class="header__language-button">RU</span>
+            <a href="/" class="header__language-button">EN</a>
+        </div>
+        <a href="/" class="header__userpic">
+            <img src="./img/user.svg" alt="Личный кабинет">
+        </a>
+    </div>
+</header>
+
+<nav class="nav">
+    <div class="container nav__container">
+        <a href="#events" class="nav__link">Выставки и события</a>
+        <a href="#museum" class="nav__link">Музей</a>
+        <a href="#online-events" class="nav__link">Онлайн-трансляции</a>
+        <a href="#online-excursions" class="nav__link">Экскурсии и лекции в прямом эфире</a>
+    </div>
+</nav>
+
+<main class="main" id="#main">
+    <div class="container">
+        <section class="main__section">
+            <h2 class="hidden">Главное</h2>
+
+            <div class="banner">
+                <img src="./img/banner.jpeg" class="banner__image" alt="От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина. 10 июля - 1 ноября. Главное здание">
+                <a href="/" class="button banner__button">Билеты онлайн</a>
+            </div>
+
+            <div class="quick-actions">
+                <a href="/" class="quick-actions__action button">Купить билет</a>
+                <a href="/" class="quick-actions__action button">Стать другом</a>
+                <a href="/" class="quick-actions__action button">Онлайн-магазин</a>
+            </div>
+        </section>
+
+        <section class="main__section" id="events">
+            <h2 class="h2">Выставки и события</h2>
+
+            <p class="hidden" id="filter-heading">Фильтр</p>
+            <ul class="filters">
+                <li class="filters__filter">
+                    <button class="filters__button" disabled aria-describedby="filter-heading">Все</button>
+                </li>
+                <li class="filters__filter">
+                    <button class="filters__button" aria-describedby="filter-heading">Сегодня</button>
+                </li>
+                <li class="filters__filter">
+                    <button class="filters__button" aria-describedby="filter-heading">Завтра</button>
+                </li>
+            </ul>
+
+            <section class="filters__section" role="tabpanel" id="events-panel">
+                <div class="cards">
+                    <div class="card cards__card">
+                        <img src="./img/exhibition-1.jpeg" alt=" " class="card__image">
+                        <h3 class="card__heading" id="exhibition-1">Святослав Рихтер в кругу друзей. Москва — Коктебель</h3>
+                        <p class="card__subheading">Выставка до 20 ноября</p>
+                        <p class="card__text">Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст</p>
+                        <p class="card__text">
+                            <a href="/" class="card__link" aria-describedby="exhibition-1">Купить билет</a>
+                        </p>
+                    </div>
+                    <div class="card cards__card">
+                        <img src="./img/exhibition-2.jpeg" alt=" " class="card__image">
+                        <h3 class="card__heading" id="exhibition-2">Тату</h3>
+                        <p class="card__subheading">Выставка до 27 сентября</p>
+                        <p class="card__text">Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст</p>
+                        <p class="card__text">
+                            <a href="/" class="card__link" aria-describedby="exhibition-2">Купить билет</a>
+                        </p>
+                    </div>
+                    <div class="card cards__card">
+                        <img src="./img/exhibition-3.jpeg" alt=" " class="card__image">
+                        <h3 class="card__heading" id="exhibition-3">От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина</h3>
+                        <p class="card__subheading">Выставка до 1 ноября</p>
+                        <p class="card__text">Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст</p>
+                        <p class="card__text">
+                            <a href="/" class="card__link" aria-describedby="exhibition-3">Купить билет</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <section class="main__section" id="museum">
+            <h2 class="h2">Музей</h2>
+
+            <ul class="filters" role="tablist">
+                <li class="filters__filter">
+                    <button class="filters__button" role="tab" aria-selected="true" data-panel-id="buildings-panel" disabled>Здания</button>
+                </li>
+                <li class="filters__filter">
+                    <button class="filters__button" role="tab" aria-selected="false" data-panel-id="history-panel">История</button>
+                </li>
+            </ul>
+
+            <section class="filters__section" role="tabpanel" id="buildings-panel">
+                <div class="cards">
+                    <div class="card cards__card">
+                        <img src="./img/building-1.jpeg" alt=" " class="card__image">
+                        <h3 class="card__heading" id="building-1">МЕМОРИАЛЬНАЯ КВАРТИРА С.Т. РИХТЕРА</h3>
+                        <p class="card__text">ул. Большая Бронная, 2/6, 16 этаж, кв. 58</p>
+                        <p class="card__text">
+                            <a href="/" class="card__link" aria-describedby="building-1">Подробнее</a>
+                        </p>
+                    </div>
+                    <div class="card cards__card">
+                        <img src="./img/building-2.jpeg" alt=" " class="card__image">
+                        <h3 class="card__heading" id="building-2">ЦЭВ «МУСЕЙОН»</h3>
+                        <p class="card__text">Колымажный пер., 6/2, 3 (вход с Малого Знаменского переулка)</p>
+                        <p class="card__text">
+                            <a href="/" class="card__link" aria-describedby="building-2">Подробнее</a>
+                        </p>
+                    </div>
+                    <div class="card cards__card">
+                        <img src="./img/building-3.jpeg" alt=" " class="card__image">
+                        <h3 class="card__heading" id="building-3">УСАДЬБА ЛОПУХИНЫХ</h3>
+                        <p class="card__text">Малый Знаменский пер., 3/5с4</p>
+                        <p class="card__text">
+                            <a href="/" class="card__link" aria-describedby="building-3">Подробнее</a>
+                        </p>
+                    </div>
+                    <div class="card cards__card">
+                        <img src="./img/building-1.jpeg" alt=" " class="card__image">
+                        <h3 class="card__heading" id="building-4">УЧЕБНЫЙ МУЗЕЙ</h3>
+                        <p class="card__text">ул. Чаянова, 15</p>
+                        <p class="card__text">
+                            <a href="/" class="card__link" aria-describedby="building-4">Подробнее</a>
+                        </p>
+                    </div>
+                    <div class="card cards__card">
+                        <img src="./img/building-2.jpeg" alt=" " class="card__image">
+                        <h3 class="card__heading" id="building-5">ОТДЕЛ ЛИЧНЫХ КОЛЛЕКЦИЙ</h3>
+                        <p class="card__text">ул. Волхонка, 10</p>
+                        <p class="card__text">
+                            <a href="/" class="card__link" aria-describedby="building-5">Подробнее</a>
+                        </p>
+                    </div>
+                    <div class="card cards__card">
+                        <img src="./img/building-3.jpeg" alt=" " class="card__image">
+                        <h3 class="card__heading" id="building-6">ГАЛЕРЕЯ</h3>
+                        <p class="card__text">ул. Волхонка, 14</p>
+                        <p class="card__text">
+                            <a href="/" class="card__link" aria-describedby="building-6">Подробнее</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="filters__section" role="tabpanel" style="display: none" id="history-panel">
+                <p class="main__text">
+                    Государственный музей изобразительных искусств имени А.С. Пушкина – одно из крупнейших в России художественных собраний зарубежного искусства с древнейших времен до наших дней.
+                </p>
+
+                <p class="main__text">В современной экспозиции представлены обширная учебная коллекция тонированных гипсовых слепков с произведений Античности, Средних веков и эпохи Возрождения, а также собрание подлинных произведений живописи, скульптуры, графики и декоративно-прикладного искусства.</p>
+
+                <p class="main__text">
+                    В залах первого этажа Главного здания представлены: произведения искусства Древнего Египта, Античности, собрание европейской живописи VIII–XVIII веков; два зала – Итальянский и Греческий дворики – занимают слепки. На втором этаже Главного здания в залах размещены слепки произведений искусства Древней Греции, Рима, Средних веков и Возрождения.
+                </p>
+
+                <p class="main__text">
+                    В начале 2017 года музей определил новое направление своей деятельности – Пушкинский XXI, – ориентированное на современное российское и западное искусство во всех аспектах – выставочном, образовательном и исследовательском. Таким образом, ГМИИ им. А.С. Пушкина представляет собой открытую, интерактивную сцену, демонстрирующую развитие мировой культуры с древности до наших дней, живое, знакомое с детства пространство для получения знаний и общения.
+                </p>
+
+                <p class="main__text">
+                    <a href="/" class="main__link">Читать далее</a>
+                </p>
+            </section>
+        </section>
+
+        <section class="main__section" id="online-events">
+            <h2 class="h2">Онлайн-трансляции</h2>
+
+            <iframe width="1030" height="611" src="https://www.youtube.com/embed/5qRR-5H1XgU" title="Ай Вейвей: движение к общечеловеческому" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <section class="main__section" id="online-excursions">
+            <h2 class="h2">Экскурсии и лекции в прямом эфире</h2>
+
+            <p class="main__text main__text_short">
+                С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям — экскурсиям и лекциям для взрослых
+                и детей, оплатив участие на сайте. Встречи будут проходить в прямом эфире на платформе Zoom;
+                предусмотрен формат живого общения с возможностью задавать вопросы экскурсоводу (лектору).
+                <a href="/" class="main__link">Подробнее</a>.
+            </p>
+            <p class="main__text main__text_short">
+                Мы будем благодарны за любое <a href="/" class="main__link">пожертвование</a>. Все поступившие средства
+                будут направлены на организацию онлайн-проектов для наших посетителей.
+            </p>
+        </section>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__left">
+            <div class="footer__links">
+                <a href="/" class="footer__link">Посетителям с ограниченными возможностями</a>
+                <a href="/" class="footer__link">Билеты и льготы</a>
+                <a href="/" class="footer__link">Противодействие коррупции</a>
+            </div>
+
+            <h3 class="h3 footer__socials-heading">Соц. сети</h3>
+            <div class="footer__socials">
+                <a href="/" class="footer__social">
+                    <img src="./img/social-mail.svg" class="footer__social-pic" alt="E-mail">
+                </a>
+                <a href="/" class="footer__social">
+                    <img src="./img/social-tg.svg" class="footer__social-pic" alt="Telegram">
+                </a>
+                <a href="/" class="footer__social">
+                    <img src="./img/social-fb.svg" class="footer__social-pic" alt="Facebook">
+                </a>
+            </div>
+        </div>
+
+        <section class="footer__right">
+            <h3 class="h3 footer__subscription-heading">Подписка на новости</h3>
+
+            <form action="/" class="footer__subscription subscription-form">
+                <input required type="text" id="email" class="subscription-form__email">
+                <label for="email" class="subscription-form__email-label">Email</label>
+                <div class="subscription-form__pda">
+                    <input required type="checkbox" id="pda-agreement" class="subscription-form__pda-checkbox">
+                    <label for="pda-agreement" class="subscription-form__pda-label">
+                        Согласен на обработку персональных данных
+                    </label>
+                </div>
+                <button type="submit" class="button subscription-form__submit">Подписаться</button>
+            </form>
+        </section>
+    </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
