@@ -50,7 +50,7 @@ const initModals = () => {
 }
 
 const messageUser = (message, anchor = document.body) => {
-    if (document.getElementById('message') {
+    if (document.getElementById('message')) {
         document.getElementById('message').remove();
     }
     
