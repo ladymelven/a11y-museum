@@ -58,7 +58,7 @@ const messageUser = (message, anchor = document.body) => {
     messageNode.id = 'message';
     messageNode.classList.add('hidden');
     messageNode.role = 'status';
-    messageNode.ariaLive = polite';
+    messageNode.ariaLive = 'polite';
     messageNode.innerText = message;
     
     anchor.appendChild(messageNode);
