@@ -50,7 +50,12 @@ const initModals = () => {
 }
 
 const messageUser = (message, anchor = document.body) => {
+    if (document.getElementById('message') {
+        document.getElementById('message').remove();
+    }
+    
     const messageNode = document.createElement('p');
+    messageNode.id = 'message';
     messageNode.classList.add('hidden');
     messageNode.role = 'status';
     messageNode.ariaLive = polite';
@@ -74,9 +79,10 @@ const initFilters = () => {
             button.addEventListener('change', (event) => {
                 const clickedButton = event.target;
                 
-                if (!clickedButton.checked) return; 
+                if (clickedButton.checked === false) return; 
                     
                 const buttonValues = clickedButton.value.split(',');
+                console.log(buttonValues);
                 
                 filteredNodes.forEach((node) => {
                     node.style.display = buttonValues.includes(node.id) ? 'block' : 'none';
