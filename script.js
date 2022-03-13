@@ -14,7 +14,7 @@ const initTabs = () => {
               });
 
               tabs.forEach((clickedTab) => {
-                 clickedTab.disabled = clickedTab === event.target;
+                 clickedTab === event.target ? clickedTab.classList.add('active') : clickedTab.classList.remove('active');
                  clickedTab['aria-selected'] = clickedTab === event.target;
               });
           });
