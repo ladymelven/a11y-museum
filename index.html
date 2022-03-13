@@ -34,7 +34,7 @@
             </button>
         </form>
         <div class="header__languages">
-            <span class="header__language-button" aria-label="Русскоязычная версия сайта" aria-label="Русскоязычная версия сайта (вы сейчас здесь)">RU</span>
+            <span class="header__language-button" aria-label="Русскоязычная версия сайта (вы сейчас здесь)">RU</span>
             <a href="/a11y-museum/" class="header__language-button" aria-label="English version of the website">EN</a>
         </div>
         <button id="login-button" class="header__userpic" aria-haspopup="dialog" data-dialog="login-dialog">
@@ -76,15 +76,15 @@
                 <h3 class="hidden" id="filter-heading">Фильтры</h3>
                 <ul class="filters">
                     <li class="filters__filter">
-                        <input type="radio" class="hidden" value="card-1,card-2,card-3" id="card-0" name="card-filter" checked> 
+                        <input type="radio" class="hidden" value="event-1,event-2,event-3" id="card-0" name="card-filter" checked> 
                         <label for="card-0" class="filters__button" aria-describedby="filter-heading">Все</label>
                     </li>
                     <li class="filters__filter">
-                        <input type="radio" class="hidden" value="card-2" id="card-1" name="card-filter">
+                        <input type="radio" class="hidden" value="event-2" id="card-1" name="card-filter">
                         <label for="card-1" class="filters__button" aria-describedby="filter-heading">Сегодня</label>
                     </li>
                     <li class="filters__filter">
-                        <input type="radio" class="hidden" value="card-1,card-3" id="card-2" name="card-filter">
+                        <input type="radio" class="hidden" value="event-1,event-3" id="card-2" name="card-filter">
                         <label for="card-2" class="filters__button" aria-describedby="filter-heading">Завтра</label>
                     </li>
                 </ul>
@@ -92,7 +92,7 @@
 
             <section class="filters__section" id="events-panel">
                 <div class="cards">
-                    <div class="card cards__card" id="card-1" data-filtered="true">
+                    <div class="card cards__card" id="event-1" data-filtered="true">
                         <img src="./img/exhibition-1.jpeg" alt=" " class="card__image">
                         <h3 class="card__heading" id="exhibition-1">Святослав Рихтер в кругу друзей. Москва — Коктебель</h3>
                         <p class="card__subheading">Выставка до 20 ноября</p>
@@ -101,7 +101,7 @@
                             <a href="/a11y-museum/" class="card__link" aria-describedby="exhibition-1">Купить билет</a>
                         </p>
                     </div>
-                    <div class="card cards__card" id="card-2" data-filtered="true">
+                    <div class="card cards__card" id="event-2" data-filtered="true">
                         <img src="./img/exhibition-2.jpeg" alt=" " class="card__image">
                         <h3 class="card__heading" id="exhibition-2">Тату</h3>
                         <p class="card__subheading">Выставка до 27 сентября</p>
@@ -110,7 +110,7 @@
                             <a href="/a11y-museum/" class="card__link" aria-describedby="exhibition-2">Купить билет</a>
                         </p>
                     </div>
-                    <div class="card cards__card" id="card-3" data-filtered="true">
+                    <div class="card cards__card" id="event-3" data-filtered="true">
                         <img src="./img/exhibition-3.jpeg" alt=" " class="card__image">
                         <h3 class="card__heading" id="exhibition-3">От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина</h3>
                         <p class="card__subheading">Выставка до 1 ноября</p>
