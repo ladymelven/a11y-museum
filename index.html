@@ -278,10 +278,8 @@
     </div>
 </footer>
 
-<dialog id="login-dialog" class="dialog">
-    <button class="dialog__close" data-close-dialog="login-dialog" aria-label="Закрыть">x</button>
-
-    <h2 id="dialog-heading" class="h2 dialog__heading">Вход</h2>
+<dialog id="login-dialog" role="dialog" aria-modal="true" class="dialog" aria-labelledby="dialog-heading">
+    <h2 id="dialog-heading" class="h2 dialog__heading" id="dialog-heading">Вход</h2>
 
     <form action="/a11y-museum/" aria-labelledby="dialog-heading">
         <div class="dialog__input-group">
@@ -296,6 +294,8 @@
 
         <button type="submit" class="dialog__button">Войти</button>
     </form>
+    
+    <button class="dialog__close" data-close-dialog="login-dialog" aria-label="Закрыть">x</button>
 </dialog>
 </body>
 </html>
