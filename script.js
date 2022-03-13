@@ -75,12 +75,6 @@ const initFilters = () => {
             button.addEventListener('change', (event) => {
                 const clickedButton = event.target;
                 
-                filters.forEach((radio) => {
-                    const label = radio.closest('label');
-                    
-                    radio === clickedButton ? label.classList.add('active') : label.classList.remove('active');
-                });
-                
                 filteredNodes.forEach((node) => {
                     node.display = buttonValues.includes(node.id) ? 'block' : 'none';
                 });
