@@ -6,6 +6,8 @@
     --accent-secondary: #5D16D5;
     --accent-secondary-hover: rgb(102, 34, 215);
     --accent-link: #9958a9;
+    --input-background: #F9F9Fb;
+    --input-border: 1px solid #C7D2E9;
 }
 
 *,
@@ -149,6 +151,8 @@ a.header__language-button:hover {
 .header__userpic {
     width: 46px;
     height: 46px;
+    background: none;
+    border: none;
 }
 
 .search {
@@ -160,8 +164,8 @@ a.header__language-button:hover {
     padding: 12px 15px 12px 20px;
     font-size: 2rem;
     line-height: 2.4rem;
-    background: #F9F9FB;
-    border: 1px solid #C7D2E9;
+    background: var(--input-background);
+    border: var(--input-border);
     border-radius: 30px;
 }
 
@@ -174,6 +178,73 @@ a.header__language-button:hover {
     padding: 0;
     background: transparent;
     border: none;
+}
+
+.dialog {
+    padding: 70px 150px 84px;
+    border: none;
+    border-radius: 8px;
+}
+
+.dialog::backdrop {
+    background: rgba(0, 0, 0, 0.43);
+}
+
+.dialog__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.dialog__heading {
+    margin-bottom: 57px;
+}
+
+.dialog__input-group {
+    position: relative;
+    width: 493px;
+    margin-bottom: 57px;
+}
+
+.dialog__input {
+    width: 100%;
+    padding: 14px 20px 16px;
+    background-color: var(--input-background);
+    border: var(--input-border);
+    border-radius: 8px;
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+.dialog__label {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: #555;
+    transition: top .3s;
+}
+
+.dialog__input:focus + .dialog__label,
+.dialog__input:not(:placeholder-shown) + .dialog__label {
+    top: -40px;
+}
+
+.dialog__button {
+    width: 493px;
+    padding: 15px;
+    background: var(--accent-primary);
+    border-radius: 8px;
+    border: none;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    text-align: center;
 }
 
 
@@ -427,7 +498,7 @@ a.header__language-button:hover {
 }
 
 .subscription-form__email:focus + .subscription-form__email-label,
-.subscription-form__email:not(:empty) + .subscription-form__email-label {
+.subscription-form__email:not(:placeholder-shown) + .subscription-form__email-label {
     top: -25px;
 }
 

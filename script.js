@@ -22,5 +22,33 @@ const initTabs = () => {
     });
 }
 
+const initModals = () => {
+    const modalButtons = document.querySelectorAll('[data-dialog]');
+    const modals = document.querySelectorAll('dialog');
+
+    modalButtons.forEach((button) => {
+        const modal = document.getElementById(button.dataset.dialog);
+        const closeButton = modal.querySelector('[data-close-dialog]');
+        const trap = window.focusTrap.createFocusTrap(modal, {
+            returnFocusOnDeactivate: true,
+            setReturnFocus: button,
+        });
+
+        button.addEventListener('click', () => {
+            modal.showModal();
+            trap.activate();
+        });
+
+        closeButton.addEventListener('click', () => {
+            modal.close();
+        });
+
+        modal.addEventListener('close', () => {
+            trap.deactivate();
+        });
+    });
+}
+
 
 initTabs();
+initModals();

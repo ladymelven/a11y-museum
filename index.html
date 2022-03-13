@@ -7,7 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dialog-polyfill.css">
     <link rel="stylesheet" href="./style.css">
+
+    <script src="https://unpkg.com/tabbable/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
+
+    <script src="./dialog-polyfill.js" defer></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
 
@@ -26,12 +33,12 @@
             </button>
         </form>
         <div class="header__languages">
-            <span class="header__language-button">RU</span>
-            <a href="/a11y-museum/" class="header__language-button">EN</a>
+            <span class="header__language-button" aria-label="Русскоязычная версия сайта">RU</span>
+            <a href="/a11y-museum/" class="header__language-button" aria-label="English version of the website">EN</a>
         </div>
-        <a href="/a11y-museum/" class="header__userpic">
-            <img src="./img/user.svg" alt="Личный кабинет">
-        </a>
+        <button id="login-button" class="header__userpic" aria-haspopup="dialog" data-dialog="login-dialog">
+            <img src="./img/user.svg" alt="Войти в личный кабинет">
+        </button>
     </div>
 </header>
 
@@ -67,7 +74,7 @@
             <p class="hidden" id="filter-heading">Фильтр</p>
             <ul class="filters">
                 <li class="filters__filter">
-                    <button class="filters__button" disabled aria-describedby="filter-heading">Все</button>
+                    <button class="filters__button active" aria-describedby="filter-heading">Все</button>
                 </li>
                 <li class="filters__filter">
                     <button class="filters__button" aria-describedby="filter-heading">Сегодня</button>
@@ -116,7 +123,7 @@
 
             <ul class="filters" role="tablist">
                 <li class="filters__filter">
-                    <button class="filters__button" id="buildings-tab" role="tab" aria-selected="true" data-panel-id="buildings-panel" disabled>Здания</button>
+                    <button class="filters__button active" id="buildings-tab" role="tab" aria-selected="true" data-panel-id="buildings-panel" disabled>Здания</button>
                 </li>
                 <li class="filters__filter">
                     <button class="filters__button" id="history-tab" role="tab" aria-selected="false" data-panel-id="history-panel">История</button>
@@ -247,7 +254,7 @@
             <h3 class="h3 footer__subscription-heading">Подписка на новости</h3>
 
             <form action="/" class="footer__subscription subscription-form">
-                <input required type="text" id="email" class="subscription-form__email">
+                <input required type="text" id="email" class="subscription-form__email" placeholder=" ">
                 <label for="email" class="subscription-form__email-label">Email</label>
                 <div class="subscription-form__pda">
                     <input required type="checkbox" id="pda-agreement" class="subscription-form__pda-checkbox">
@@ -261,6 +268,24 @@
     </div>
 </footer>
 
-<script src="./script.js"></script>
+<dialog id="login-dialog" class="dialog">
+    <button class="dialog__close" data-close-dialog="login-dialog" aria-label="Закрыть">x</button>
+
+    <h2 id="dialog-heading" class="h2 dialog__heading">Вход</h2>
+
+    <form action="/a11y-museum/" aria-labelledby="dialog-heading">
+        <div class="dialog__input-group">
+            <input type="text" id="username" required class="dialog__input" placeholder=" ">
+            <label for="username" class="dialog__label">Логин</label>
+        </div>
+
+        <div class="dialog__input-group">
+            <input type="password" id="password" required class="dialog__input" placeholder=" ">
+            <label for="password" class="dialog__label">Пароль</label>
+        </div>
+
+        <button type="submit" class="dialog__button">Войти</button>
+    </form>
+</dialog>
 </body>
 </html>
