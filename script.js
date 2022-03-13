@@ -31,8 +31,10 @@ const initModals = () => {
         const closeButton = modal.querySelector('[data-close-dialog]');
         const trap = window.focusTrap.createFocusTrap(modal, {
             returnFocusOnDeactivate: true,
+            escapeDeactivates: false,
             setReturnFocus: button,
         });
+        window.dialogPolyfill.registerDialog(modal);
 
         button.addEventListener('click', () => {
             modal.showModal();
