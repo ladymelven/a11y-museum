@@ -359,7 +359,8 @@ a.header__language-button:hover {
     margin-right: 40px;
 }
 
-.filters__button:hover {
+.filters__button:hover,
+.filters__button:focus {
     text-decoration: none;
 }
 
