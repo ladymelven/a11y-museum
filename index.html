@@ -26,14 +26,15 @@
             <img src="./img/logo.png" alt="Государственный музей изобразительных искусств имени А.С. Пушкина, на главную">
         </a>
         <form action="/" class="header__search search" role="search">
-            <label for="search-input" class="hidden search__label">Поиск по сайту</label>
+            <h3 class="hidden">Поиск</h3>
+            <label for="search-input" class="hidden search__label">Поисковая строка</label>
             <input type="text" class="search__input" id="search-input">
             <button type="submit" class="search__submit">
                 <img src="./img/search.svg" alt="Искать">
             </button>
         </form>
         <div class="header__languages">
-            <span class="header__language-button" aria-label="Русскоязычная версия сайта">RU</span>
+            <span class="header__language-button" aria-label="Русскоязычная версия сайта" aria-label="Русскоязычная версия сайта (вы сейчас здесь)">RU</span>
             <a href="/a11y-museum/" class="header__language-button" aria-label="English version of the website">EN</a>
         </div>
         <button id="login-button" class="header__userpic" aria-haspopup="dialog" data-dialog="login-dialog">
@@ -71,18 +72,29 @@
         <section class="main__section" id="events">
             <h2 class="h2">Выставки и события</h2>
 
-            <p class="hidden" id="filter-heading">Фильтр</p>
-            <ul class="filters">
-                <li class="filters__filter">
-                    <button class="filters__button active" aria-describedby="filter-heading">Все</button>
-                </li>
-                <li class="filters__filter">
-                    <button class="filters__button" aria-describedby="filter-heading">Сегодня</button>
-                </li>
-                <li class="filters__filter">
-                    <button class="filters__button" aria-describedby="filter-heading">Завтра</button>
-                </li>
-            </ul>
+            <form>
+                <h3 class="hidden" id="filter-heading">Фильтры</h3>
+                <ul class="filters">
+                    <li class="filters__filter">
+                        <label class="filters__button active" aria-describedby="filter-heading">
+                            Все
+                            <input type="radio" class="hidden" checked>   
+                        </label>
+                    </li>
+                    <li class="filters__filter">
+                        <label class="filters__button" aria-describedby="filter-heading">
+                            Сегодня
+                            <input type="radio" class="hidden">
+                        </label>
+                    </li>
+                    <li class="filters__filter">
+                        <label class="filters__button" aria-describedby="filter-heading">
+                            Завтра
+                            <input type="radio" class="hidden">
+                        </label>
+                    </li>
+                </ul>
+            </form>
 
             <section class="filters__section" role="tabpanel" id="events-panel">
                 <div class="cards">
@@ -123,14 +135,16 @@
 
             <ul class="filters" role="tablist">
                 <li class="filters__filter">
-                    <button class="filters__button active" id="buildings-tab" role="tab" aria-selected="true" data-panel-id="buildings-panel" disabled>Здания</button>
+                    <button class="filters__button active" id="buildings-tab" role="tab" aria-selected="true" data-panel-id="buildings-panel">Здания</button>
                 </li>
                 <li class="filters__filter">
                     <button class="filters__button" id="history-tab" role="tab" aria-selected="false" data-panel-id="history-panel">История</button>
                 </li>
             </ul>
 
-            <section class="filters__section" role="tabpanel" id="buildings-panel" aria-labelledby="buildings-tab">
+            <section class="filters__section" role="tabpanel" id="buildings-panel">
+                <h3 class="hidden">Здания</h3>
+                
                 <div class="cards">
                     <div class="card cards__card">
                         <img src="./img/building-1.jpeg" alt=" " class="card__image">
@@ -184,6 +198,8 @@
             </section>
 
             <section class="filters__section" role="tabpanel" style="display: none" id="history-panel" aria-labelledby="history-tab">
+                <h3 class="hidden">История</h3>
+                
                 <p class="main__text">
                     Государственный музей изобразительных искусств имени А.С. Пушкина – одно из крупнейших в России художественных собраний зарубежного искусства с древнейших времен до наших дней.
                 </p>
