@@ -68,6 +68,7 @@ const initFilters = () => {
     filterGroups.forEach((group) => {
         const filters = group.querySelectorAll('input[type="radio"]');
         const filteredNodes = group.querySelectorAll('[data-filtered="true"]');
+        console.log(filteredNodes);
         
         filters.forEach((button) => {
             const buttonValues = button.value.split(',');
@@ -77,6 +78,8 @@ const initFilters = () => {
                 
                 filteredNodes.forEach((node) => {
                     node.display = buttonValues.includes(node.id) ? 'block' : 'none';
+                    
+                    console.log(node);
                 });
                 
                 messageUser(`Найдено ${buttonValues.length} элементов`);
