@@ -368,7 +368,8 @@ input:focus + .filters__button {
     outline-color: var(--accent-secondary);
 }
 
-.filters__button.active {
+.filters__button.active,
+input:checked + .filters__button {
     padding: 16px 38px;
     min-width: 150px;
     text-align: center;
