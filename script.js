@@ -73,6 +73,9 @@ const initFilters = () => {
         filters.forEach((button) => {
             button.addEventListener('change', (event) => {
                 const clickedButton = event.target;
+                
+                if (!clickedButton.checked) return; 
+                    
                 const buttonValues = clickedButton.value.split(',');
                 
                 filteredNodes.forEach((node) => {
