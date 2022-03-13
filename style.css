@@ -364,6 +364,10 @@ a.header__language-button:hover {
     text-decoration: none;
 }
 
+input:focus + .filters__button {
+    outline-color: var(--accent-secondary);
+}
+
 .filters__button.active {
     padding: 16px 38px;
     min-width: 150px;
