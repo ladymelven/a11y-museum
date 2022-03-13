@@ -64,7 +64,9 @@ const messageUser = (message, anchor = document.body) => {
     anchor.appendChild(messageNode);
     
     setTimeout(() => {
-        anchor.removeChild(messageNode);
+        if (messageNode) {
+            messageNode.remove();
+        }
     }, 5000);
 }
 
