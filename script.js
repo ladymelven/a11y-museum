@@ -94,3 +94,4 @@ const initFilters = () => {
 
 initTabs();
 initModals();
+initFilters();
