@@ -49,16 +49,17 @@ const initModals = () => {
     });
 }
 
-const messageUser = (message) => {
+const messageUser = (message, anchor = document.body) => {
     const messageNode = document.createElement('p');
     messageNode.classList.add('hidden');
-    messageNode.role = "status";
+    messageNode.role = 'status';
+    messageNode.ariaLive = polite';
     messageNode.innerText = message;
     
-    document.body.appendChild(messageNode);
+    anchor.appendChild(messageNode);
     
     setTimeout(() => {
-        document.body.removeChild(messageNode);
+        anchor.removeChild(messageNode);
     }, 5000);
 }
 
@@ -70,16 +71,15 @@ const initFilters = () => {
         const filteredNodes = group.querySelectorAll('[data-filtered="true"]');
         
         filters.forEach((button) => {
-            const buttonValues = button.value.split(',');
-
             button.addEventListener('change', (event) => {
                 const clickedButton = event.target;
+                const buttonValues = clickedButton.value.split(',');
                 
                 filteredNodes.forEach((node) => {
                     node.style.display = buttonValues.includes(node.id) ? 'block' : 'none';
                 });
                 
-                messageUser(`Найдено ${buttonValues.length} элементов`);
+                messageUser(`Найдено ${buttonValues.length} элементов`, group);
             });
         });
     });
