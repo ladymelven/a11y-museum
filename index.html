@@ -76,7 +76,7 @@
                 <h3 class="hidden" id="filter-heading">Фильтры</h3>
                 <ul class="filters">
                     <li class="filters__filter">
-                        <input type="radio" class="hidden" value="card-1,card-2,card-3" id="card-0" name="card-filter" checked> 
+                        <input type="radio" class="hidden" value="card-0,card-1,card-2" id="card-0" name="card-filter" checked> 
                         <label for="card-0" class="filters__button" aria-describedby="filter-heading">Все</label>
                     </li>
                     <li class="filters__filter">
@@ -84,7 +84,7 @@
                         <label for="card-1" class="filters__button" aria-describedby="filter-heading">Сегодня</label>
                     </li>
                     <li class="filters__filter">
-                        <input type="radio" class="hidden" value="card-2" id="card-2" name="card-filter">
+                        <input type="radio" class="hidden" value="card-0,card-2" id="card-2" name="card-filter">
                         <label for="card-2" class="filters__button" aria-describedby="filter-heading">Завтра</label>
                     </li>
                 </ul>
@@ -285,7 +285,7 @@
 
     <form action="/a11y-museum/" aria-labelledby="dialog-heading">
         <div class="dialog__input-group">
-            <input type="text" id="username" required class="dialog__input" placeholder=" ">
+            <input type="text" id="username" required class="dialog__input" placeholder=" " autocomplete="username">
             <label for="username" class="dialog__label">Логин</label>
         </div>
 
