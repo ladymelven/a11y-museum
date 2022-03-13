@@ -84,7 +84,6 @@ const initFilters = () => {
                 if (clickedButton.checked === false) return; 
                     
                 const buttonValues = clickedButton.value.split(',');
-                console.log(buttonValues);
                 
                 filteredNodes.forEach((node) => {
                     node.style.display = buttonValues.includes(node.id) ? 'block' : 'none';
